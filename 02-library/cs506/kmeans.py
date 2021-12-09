@@ -3,6 +3,8 @@ from math import inf
 import random
 import csv
 
+from . import sim
+
 
 def point_avg(points):
     """
@@ -43,10 +45,10 @@ def distance(a, b):
     """
     Returns the Euclidean distance between a and b
     """
-    raise NotImplementedError()
+    sim.euclidean_dist(a,b)
 
 def distance_squared(a, b):
-    raise NotImplementedError()
+    return distance(a,b) **2
 
 def generate_k(dataset, k):
     """
